@@ -9,12 +9,12 @@ slash = SlashCommand(bot)
 
 @slash.slash(name='changenick')
 async def changenick(ctx: SlashContext, user: str, nick: str):
-    await bot.http.edit_member(ctx.guild.id, user, reason='cringebot', nick=nick)
+    await bot.http.edit_member(ctx.guild.id, user, reason=f'{ctx.author.name}#{ctx.author.discriminator} ({ctx.author.id})', nick=nick)
 
 
 @slash.slash(name='clearnick')
 async def clearnick(ctx: SlashContext, user: str):
-    await bot.http.edit_member(ctx.guild.id, user, reason='cringebot', nick=None)
+    await bot.http.edit_member(ctx.guild.id, user, reason=f'{ctx.author.name}#{ctx.author.discriminator} ({ctx.author.id})', nick=None)
 
 
 def main(token=os.getenv('CRINGEBOT_TOKEN')):
