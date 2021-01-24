@@ -58,11 +58,18 @@ python-versions = "*"
 
 [[package]]
 name = "discord-py-slash-command"
-version = "1.0.8.5"
+version = "1.0.9"
 description = "Simple Discord Slash Command extension for discord.py."
 category = "main"
 optional = false
 python-versions = ">=3.6"
+develop = false
+
+[package.source]
+type = "git"
+url = "https://github.com/eunwoo1104/discord-py-slash-command"
+reference = "master"
+resolved_reference = "0be3bea3f9669d19a211d5d04ea7e5f4037a8ea9"
 
 [[package]]
 name = "discord.py"
@@ -161,7 +168,7 @@ typing-extensions = {version = ">=3.7.4", markers = "python_version < \"3.8\""}
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.6"
-content-hash = "60f586a03833d1399a49a1c6bd1070d29f06625266fdf92a2f724aec7526b463"
+content-hash = "5679406b9cb0afa99dff54c083dc70baacaa16b8783ba1697b7883e59f0ef47d"
 
 [metadata.files]
 aiohttp = [
@@ -219,10 +226,7 @@ chardet = [
     {file = "chardet-3.0.4-py2.py3-none-any.whl", hash = "sha256:fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"},
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
-discord-py-slash-command = [
-    {file = "discord-py-slash-command-1.0.8.5.tar.gz", hash = "sha256:4e1b8817d3843355fd536eb6d970c1925e2befda47cf41e262989f7af0521e73"},
-    {file = "discord_py_slash_command-1.0.8.5-py3-none-any.whl", hash = "sha256:53bf915718f4ec0a121bd670b9b26b566c97ea03dc7afdf098ec49fd78defa7b"},
-]
+discord-py-slash-command = []
 "discord.py" = [
     {file = "discord.py-1.6.0-py3-none-any.whl", hash = "sha256:3df148daf6fbcc7ab5b11042368a3cd5f7b730b62f09fb5d3cbceff59bcfbb12"},
     {file = "discord.py-1.6.0.tar.gz", hash = "sha256:ba8be99ff1b8c616f7b6dcb700460d0222b29d4c11048e74366954c465fdd05f"},
