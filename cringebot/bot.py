@@ -19,6 +19,7 @@ async def changenick(ctx: SlashContext, user: str, nick: str):
     if isinstance(author, int):
         author = await bot.fetch_user(author)
     await bot.http.edit_member(ctx.guild.id, user, reason=prettyprint_author(author), nick=nick)
+    await ctx.respond(True)
     await ctx.send(content=f'nickname for <@{user}> set', hidden=True)
 
 
@@ -28,6 +29,7 @@ async def clearnick(ctx: SlashContext, user: str):
     if isinstance(author, int):
         author = await bot.fetch_user(author)
     await bot.http.edit_member(ctx.guild.id, user, reason=prettyprint_author(author), nick=None)
+    await ctx.respond(True)
     await ctx.send(content=f'nickname for <@{user}> cleared', hidden=True)
 
 
